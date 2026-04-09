@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.mdka.merdekaapps",
+    "sha256_cert_fingerprints":
+    ["58:6C:AD:E5:73:63:2F:03:C2:C2:2C:7B:0F:9A:C4:14:E3:45:98:BE:F1:E5:DB:59:3F:B4:4B:07:9E:EC:47:1B"]
+  }
+}]
