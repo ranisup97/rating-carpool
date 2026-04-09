@@ -31,26 +31,19 @@
   </script> -->
 
   <script>
-  const fullPath = window.location.pathname;
+  const path = window.location.pathname;
   const ua = navigator.userAgent;
 
-  // hapus prefix repo github pages
-  const cleanPath = fullPath.replace('/merdeka.github.io/', '');
+  // fallback buka app (optional)
+  window.location.href = `merdekaapp://${path.replace('/', '')}`;
 
-  console.log('Full Path:', fullPath);
-  console.log('Clean Path:', cleanPath);
-
-  // coba buka app
-  window.location.href = `merdekaapp://${cleanPath}`;
-
-  // fallback ke store
   setTimeout(() => {
     if (/android/i.test(ua)) {
       window.location.href = 'https://play.google.com/store/apps/details?id=com.mdka.merdekaapps';
     } else if (/iphone|ipad|ipod/i.test(ua)) {
       window.location.href = 'https://apps.apple.com/us/app/merdeka-apps/id6756284725';
     }
-  }, 2500);
+  }, 2000);
 </script>
 </body>
 </html>
